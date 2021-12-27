@@ -24,6 +24,7 @@ img {
 .wrapper {
     padding: 0 20px;
     position: relative;
+    overflow: hidden;
 }
 .section {
     margin: 50px 0;
@@ -407,4 +408,26 @@ img {
 }
 .shop {
     height: 700px;
+}
+.menu {
+    position: fixed;
+    top: 100px;
+    left: -406px;
+    background: #0A0A0A;
+    width: auto;
+    height: 700px;
+    padding: 160px 150px 150px 90px;
+    z-index: 999;
+    transition: .4s;
+}
+.menu.active {
+    left: 0;
+}
+.menu-link {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+.menu-item {
+    margin-bottom: 30px;
 }
