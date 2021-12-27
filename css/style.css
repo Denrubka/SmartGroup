@@ -399,3 +399,12 @@ img {
     justify-content: end;
     width: 50%;
 }
+.restaurant {
+    height: 700px;
+}
+.resto {
+    height: 700px;
+}
+.shop {
+    height: 700px;
+}
