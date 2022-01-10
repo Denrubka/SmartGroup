@@ -1,8 +1,8 @@
 const informationSwiper = new Swiper('.information-swiper', {
-    loop: true,
     autoHeight: true,
-    slidesPerView: 3,
+    loop: true,
     spaceBetween: 30,
+    slidesPerView: 3,
     navigation: {
       nextEl: '.information-swiper__next',
       prevEl: '.information-swiper__prev',
@@ -10,13 +10,22 @@ const informationSwiper = new Swiper('.information-swiper', {
 });
 
 const restaurantsSwiper = new Swiper('.restaurants-swiper', {
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 10,
     navigation: {
       nextEl: '.restaurants-swiper__next',
       prevEl: '.restaurants-swiper__prev',
     },
+});
+
+const restaurantSwiper = new Swiper('.restaurant-gallery', {
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.restaurants-swiper__next',
+    prevEl: '.restaurants-swiper__prev',
+  },
 });
 
 const footerInput = document.querySelector('.cta-input input[type="email"]');
@@ -35,3 +44,13 @@ const menu = document.querySelector('.menu');
 menuBtn.addEventListener('click', event => {
   menu.classList.toggle('active')
 })
+
+
+var wow = new WOW(
+  {
+    boxClass:     'wow',      // класс, скрывающий элемент до момента отображения на экране (по умолчанию, wow)
+    animateClass: 'animated', // класс для анимации элемента (по умолчанию, animated)
+    
+  }
+);
+wow.init();
