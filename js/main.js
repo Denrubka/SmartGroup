@@ -37,7 +37,6 @@ footerInput.addEventListener('input', () => {
     footerSpan.classList.remove('active');
   }
 })
-console.log(footerInput.value);
 
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
