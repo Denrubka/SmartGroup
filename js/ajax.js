@@ -47,7 +47,7 @@ try {
 
         div.innerHTML = `
         <div class="restaurants-swiper__slide-head">
-            <img class="restaurants-swiper__slide-img" src="${thumb}" alt="slide">
+            <img class="restaurants-swiper__slide-img" src=".${thumb}" alt="slide">
         </div>
         <div class="restaurants-swiper__slide-title">
             <h3>${name}</h3>
