@@ -41,7 +41,7 @@ try {
 
     const createSlide = ({name, thumb, id}) => {
         const div = document.createElement('a');
-        div.href = '/restaurant.html#' + id;
+        div.href = './restaurant.html#' + id;
         div.classList.add('restaurants-swiper__slide');
         div.classList.add('swiper-slide');
 
