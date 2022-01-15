@@ -39,7 +39,7 @@ try {
     }
     const slider = document.querySelector('.swiper-wrapper-restaurants');
 
-    const createSlide = ({name, thumb, id}) => {
+    const createSlide = ({name, id, folder}) => {
         const div = document.createElement('a');
         div.href = './restaurant.html#' + id;
         div.classList.add('restaurants-swiper__slide');
@@ -47,7 +47,7 @@ try {
 
         div.innerHTML = `
         <div class="restaurants-swiper__slide-head">
-            <img class="restaurants-swiper__slide-img" src="${thumb}" alt="slide">
+            <img class="restaurants-swiper__slide-img" src="./img/${folder}1.jpg" alt="slide">
         </div>
         <div class="restaurants-swiper__slide-title">
             <h3>${name}</h3>
@@ -98,28 +98,28 @@ try {
     const slider = document.querySelector('.swiper-wrapper');
 
 
-    // const createSlide = ({folder}) => {
-    //     const div = document.createElement('div');
-    //     div.classList.add('swiper-slide');
+    const createSlide = (nameImg) => {
+        const div = document.createElement('div');
+        div.classList.add('swiper-slide');
 
+        div.innerHTML = `
+        <img src="./img/${nameImg}.jpg" alt="">
+        `
+        return div;
 
-    //     div.innerHTML = `
-    //     <img src="./img/restaurants-slide.jpg" alt="">
-    //     `
-    //     return div;
-    // }
+    }
 
-    // const renderSliderList = data => {
-    //     slider.textContent = '';
+    const renderSliderList = data => {
+        slider.textContent = '';
         
-    //     data.forEach(item => {
-    //         const slide = createSlide(item);
-    //         slider.append(slide);
-    //     }) 
-    // }
+        data.forEach(item => {
+            const slide = createSlide(item);
+            slider.append(slide);
+        }) 
+    }
 
 
-    const renderRestaurantPage = ([{ name, description }]) => {
+    const renderRestaurantPage = ([{ name, nameImg, description }]) => {
         restaurantTitle.textContent = name;
         restaurantDesc.textContent = description;
 
@@ -128,7 +128,7 @@ try {
         } else {
             restaurantDesc.style.display = 'none';
         }
-        // renderSliderList();
+        renderSliderList(nameImg);
     }
     window.addEventListener('hashchange', () => {
         hash = location.hash.substring(1);

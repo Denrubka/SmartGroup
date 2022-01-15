@@ -2,11 +2,21 @@ const informationSwiper = new Swiper('.information-swiper', {
     autoHeight: true,
     loop: true,
     spaceBetween: 30,
-    slidesPerView: 3,
     navigation: {
       nextEl: '.information-swiper__next',
       prevEl: '.information-swiper__prev',
     },
+    breakpoints: {
+    // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+    }
 });
 
 const restaurantsSwiper = new Swiper('.restaurants-swiper', {
@@ -16,6 +26,16 @@ const restaurantsSwiper = new Swiper('.restaurants-swiper', {
       nextEl: '.restaurants-swiper__next',
       prevEl: '.restaurants-swiper__prev',
     },
+    breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+      }
 });
 
 const restaurantSwiper = new Swiper('.restaurant-gallery', {
